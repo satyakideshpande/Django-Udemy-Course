@@ -15,7 +15,7 @@ articles = {
 def news_view(request,topic):
     return HttpResponse(articles[topic])
 
-# View that adds two numbers
+# View that adds two numbers from UI
 def add_view(request, num1, num2):
     result =  num1 + num2
     return HttpResponse(str(result))
