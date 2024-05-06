@@ -5,4 +5,4 @@ from django.http.response import HttpResponse
 
 
 def simple_view(request):
-    return HttpResponse('Simple View123')
+    return HttpResponse('Simple View')
