@@ -1,5 +1,6 @@
 from django.shortcuts import render
-from django.http.response import HttpResponse,Http404,HttpResponseNotFound
+from django.http.response import HttpResponse,Http404,HttpResponseNotFound,HttpResponseRedirect
+from django.urls import reverse
 
 # Create your views here.
 
@@ -21,7 +22,8 @@ def news_view(request,topic):
         result = 'Page not found'
         return HttpResponseNotFound(result)
 
-# View that adds two numbers from UI
-def add_view(request, num1, num2):
-    result =  num1 + num2
-    return HttpResponse(str(result))
+def num_page_view(request,num_page):
+    topics_list = list(articles.keys())
+    topic =  topics_list[num_page]
+
+    return HttpResponseRedirect(reverse('topic-page',args=[topic]))
