@@ -5,10 +5,12 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Variable Page Opened</h1>
-    <div>
-        <h2>Welcome {{first_name | upper}} {{last_name}}. Welcome to Django</h2>
-        # You can add filters such as upper using | {filter_name}. Can find them online
-    </div>
+    #Tags are used to add more functionality to template code. 
+
+    <h1>Variable Page Opened</h1> #
+    {% for item in some_list %}
+        <h1>{{item}}</h1> 
+    {% endfor %}
+    
 </body>
 </html>
