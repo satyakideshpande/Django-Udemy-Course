@@ -6,3 +6,7 @@ from django.http.response import HttpResponse,Http404,HttpResponseNotFound,HttpR
 
 def example_view(request):
     return render(request,'my_app/example.html')
+
+def variable_view(request):
+    my_var = {'first_name':'Satyaki', 'last_name':'Deshpande'}
+    return render(request,'my_app/variables.html', context= my_var)
